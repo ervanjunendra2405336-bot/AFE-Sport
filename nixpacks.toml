@@ -1,9 +1,9 @@
 [phases.setup]
 nixPkgs = ['php82', 'php82Packages.composer']
 
-[phases.build]
+[phases.install]
 cmds = [
-  'composer install --no-dev --optimize-autoloader --no-interaction'
+  'composer install --no-dev --no-interaction --prefer-dist --optimize-autoloader'
 ]
 
 [start]
