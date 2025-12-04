@@ -37,6 +37,7 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
             'index' => 'admin.lapangan.index',
             'create' => 'admin.lapangan.create',
             'store' => 'admin.lapangan.store',
+            'show' => 'admin.lapangan.show',
             'edit' => 'admin.lapangan.edit',
             'update' => 'admin.lapangan.update',
             'destroy' => 'admin.lapangan.destroy',
