@@ -1,13 +1,5 @@
 [build]
 builder = "nixpacks"
-buildCommand = "composer install --no-dev --optimize-autoloader --no-interaction"
 
 [deploy]
-startCommand = "php artisan config:clear && php artisan route:clear && php artisan cache:clear && php artisan view:clear && php artisan migrate:fresh --seed --force && php artisan serve --host=0.0.0.0 --port=$PORT"
-restartPolicyType = "on_failure"
-restartPolicyMaxRetries = 3
-
-[env]
-APP_ENV = "production"
-APP_DEBUG = "false"
-DB_CONNECTION = "mysql"
+startCommand = "php artisan serve --host=0.0.0.0 --port=$PORT"
